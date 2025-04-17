@@ -31,6 +31,6 @@ pub fn handle(
     vault.strike_price = strike_price;
     vault.expiry_ts = expiry_ts;
     vault.total_deposits = 0;
-    vault.bump = ctx.bumps["vault"];
+    vault.bump = ctx.bumps.vault;
     Ok(())
 }
