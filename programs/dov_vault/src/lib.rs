@@ -1,18 +1,18 @@
 use anchor_lang::prelude::*;
 
-// Import all instructions at once
 mod state;
 mod instructions;
 mod errors;
 
-// Direct imports for specific instruction handlers
-use instructions::initialize_vault::*;
-use instructions::deposit::*;
-use instructions::withdraw::*;
-use instructions::sell_options::*;
-use instructions::settle_epoch::*;
-
 use crate::errors::VaultError;
+
+// Import instruction handlers
+use crate::instructions::initialize_vault::handle as initialize_vault_handle;
+use crate::instructions::deposit::handle as deposit_handle;
+use crate::instructions::withdraw::handle as withdraw_handle;
+use crate::instructions::sell_options::handle as sell_options_handle;
+use crate::instructions::settle_epoch::handle as settle_epoch_handle;
+
 
 declare_id!("CyAmdmRwrJzbPS84TkFxdH9KWfLMMSgGsXAaYZpTmmXs");
 
