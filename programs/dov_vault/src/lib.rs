@@ -6,11 +6,11 @@ mod instructions;
 mod errors;
 
 // Direct imports for specific instruction handlers
-use crate::instructions::initialize_vault::{InitializeVault, handle as initialize_vault_handle};
-use crate::instructions::deposit::{Deposit, handle as deposit_handle};
-use crate::instructions::withdraw::{Withdraw, handle as withdraw_handle};
-use crate::instructions::sell_options::{SellOptions, handle as sell_options_handle};
-use crate::instructions::settle_epoch::{SettleEpoch, handle as settle_epoch_handle};
+use instructions::initialize_vault::*;
+use instructions::deposit::*;
+use instructions::withdraw::*;
+use instructions::sell_options::*;
+use instructions::settle_epoch::*;
 
 use crate::errors::VaultError;
 
